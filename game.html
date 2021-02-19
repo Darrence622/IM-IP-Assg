@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="game.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.4/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/30fcb22e35.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Halloween Party</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="game.html">Play</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="achievements.html">Achievements</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    <!-- Full Page Image Header with Vertically Centered Content -->
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="font-weight-light">Play</h1>
+                    <p class="lead">Ready. Set. BOO!</p>
+                </div>
+            </div>
+        </div>
+    </header>
+  
+    <!-- Page Content -->
+     
+  <section>
+
+      <div class="gamebody">
+          <header>
+              <h1>Memory Game</h1>
+          </header>
+
+          <section class="score-panel">
+            <ul class="stars">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+
+            <span class="moves">0</span> Move(s)
+
+              <div class="timer">
+              </div>
+
+              <div class="restart" onclick=startGame()>
+              <i class="fa fa-repeat"></i>
+            </div>
+          </section>
+
+          <ul class="deck" id="card-deck">
+              <li class="card" type="ghost">
+                  <i class="fas fa-ghost"></i>
+              </li>
+              <li class="card" type="camera">
+                  <i class="fa fa-camera-retro"></i>
+              </li>
+              <li class="card match" type="fire">
+                  <i class="fa fa-fire"></i>
+              </li>
+              <li class="card" type="spider" >
+                  <i class="fas fa-spider"></i>
+              </li>
+              <li class="card" type="crow">
+                  <i class="fas fa-crow"></i>
+              </li>
+              <li class="card match" type="fire">
+                  <i class="fa fa-fire"></i>
+              </li>
+              <li class="card" type="broom">
+                  <i class="fas fa-broom"></i>
+              </li>
+              <li class="card" type="hat">
+                  <i class="fas fa-hat-wizard"></i>
+              </li>
+              <li class="card" type="ghost">
+                  <i class="fas fa-ghost"></i>
+              </li>
+              <li class="card" type="book">
+                  <i class="fas fa-book-dead"></i>
+              </li>
+              <li class="card" type="broom">
+                  <i class="fas fa-broom"></i>
+              </li>
+              <li class="card" type="book">
+                  <i class="fas fa-book-dead"></i>
+              </li>
+              <li class="card open show" type="spider">
+                  <i class="fas fa-spider"></i>
+              </li>
+              <li class="card" type="hat">
+                  <i class="fas fa-hat-wizard"></i>
+              </li>
+              <li class="card" type="camera">
+                  <i class="fa fa-camera-retro"></i>
+              </li>
+              <li class="card" type="crow">
+                  <i class="fas fa-crow"></i>
+              </li>
+          </ul>
+
+          <div id="popup1" class="overlay">
+              <div class="popup">
+                  <h2>Congratulations</h2>
+                  <a class="close" href=# >×</a>
+                  <div class="content-1">
+                      Congratulations you're a winner 
+                  </div>
+                  <div class="content-2">
+                      <p>You made <span id=finalMove> </span> moves </p>
+                      <p>in <span id=totalTime> </span> </p>
+                      <p>Rating:  <span id=starRating></span></p>
+                      <p>Won characters: <span id=achievements></span></p>
+                  </div>
+                  <button id="play-again"onclick="playAgain()">
+                      Play again</a>
+                  </button>
+              </div>
+          </div>
+
+      </div>
+      
+  </section>
+  <script src="game.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

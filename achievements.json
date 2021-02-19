@@ -1,0 +1,36 @@
+{
+  supernaturalArray:[
+    {
+      "name":"Ghost",
+      "image":"IP AD assets ghost.jpg",
+      "information":"A disembodied soul especially : the soul of a dead person believed to be an inhabitant of the unseen world"
+    },
+    {
+      "name":"Mummy",
+      "image":"IP AD assets mummy.jpg",
+      "information":"A body embalmed and dried and wrapped for burial in ancient Egypt."
+    },
+    {
+      "name":"Frankenstein",
+      "image":"IP AD assets frank.jpg",
+      "information":"Also called Frankenstein monster. the monster or destructive agency itself.."
+    },
+    {
+      "name":"Sarcophagus",
+      "image":"IP AD assets coffin.jpg",
+      "information":"A sarcophagus is a box-like funeral receptacle for a corpse, most commonly carved in stone, and usually displayed above ground, though it may also be buried.."
+    },
+    {
+      "name":"Crucifix",
+      "image":"IP AD assets crucifix.jpg",
+      "information":"A Crucifix is used to stop Ghosts from entering their physical form to attack you"
+    },
+    {
+      "name":"Camera",
+      "image":"IP AD assets camera.jpg",
+      "information":"A camera to capture the paranormal and supernatural."
+    }
+]
+}
+  
+    
